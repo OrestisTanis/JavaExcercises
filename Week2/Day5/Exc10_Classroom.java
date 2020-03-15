@@ -16,7 +16,6 @@ public class Exc10_Classroom {
         Scanner scanner = new Scanner(System.in);
         int numOfRows = -1;
         int studentCapacity = -1;
-        String studentName = "";
         int randomRow = -1;
         int randomSeatInRow = -1;
         String userInput = "";
@@ -87,7 +86,7 @@ public class Exc10_Classroom {
             while (!inputValid) {
                 System.out.printf("Please enter a valid student name for seat[%d][%d]:\n", randomRow, randomSeatInRow);
                 userInput = scanner.next();
-                inputValid = userInput.trim().matches("[a-zA-Z]+( +[a-zA-Z]+)*"); // regexp for "word word"
+                inputValid = userInput.trim().matches("[a-zA-Z]+( +[a-zA-Z]+)*");
             }
 
             // Place student
