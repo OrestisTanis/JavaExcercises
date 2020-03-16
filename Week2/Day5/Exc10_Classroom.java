@@ -12,7 +12,7 @@ public class Exc10_Classroom {
 
     public static void main(String[] args) {
         System.out.println("************** Program Start ***************");
-        // Declarations && Initizations
+        // Declarations && Initializations
         Scanner scanner = new Scanner(System.in);
         int numOfRows = -1;
         int studentCapacity = -1;
