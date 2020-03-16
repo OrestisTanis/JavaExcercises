@@ -46,7 +46,7 @@ public class Exc10_Classroom {
 
         // Calculate the number of extra sets 
         int extraSeatsNeeded = studentCapacity % numOfRows != 0 ? studentCapacity % numOfRows : 0;
-        System.out.println("extraSeatsNeeded: " + extraSeatsNeeded + ", studentCapacity: " + studentCapacity);
+        // System.out.println("extraSeatsNeeded: " + extraSeatsNeeded + ", studentCapacity: " + studentCapacity);
 
         // Construct classroom with empty seats
         String[][] seats = new String[numOfRows][];
@@ -69,7 +69,6 @@ public class Exc10_Classroom {
             while (!foundSeat) {
                 // Get a random seat in a random row
                 randomRow = getRandomRow(numOfRows);
-                
                 randomSeatInRow = getRandomSeatInRow(seats, randomRow);
 
                 // If the random seat is empty get out of the while loop
