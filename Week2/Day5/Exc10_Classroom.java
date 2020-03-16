@@ -93,10 +93,10 @@ public class Exc10_Classroom {
             seats[randomRow][randomSeatInRow] = userInput;
             numberOfEmptySeats--;
 
-            // Print the seats with all student seated
-            printClassRoom(seats);
         }
-
+        
+         // Print the seats with all students seated
+         printClassRoom(seats);
     }
 
     static void printClassRoom(String[][] seats){
