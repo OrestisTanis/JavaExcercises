@@ -95,7 +95,7 @@ public class Exc10_Classroom {
 
         }
         
-         // Print the seats with all students seated
+         // We're finished, so print the seats with all students seated
          printClassRoom(seats);
     }
 
