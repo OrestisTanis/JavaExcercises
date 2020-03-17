@@ -31,6 +31,7 @@ public class BankAccount {
         this.name = "No name";
         // Use the number of accounts opened as a unique ID
         this.number = accountsOpened;
+        // Create transactions list and store its first entry
         this.transactions = new ArrayList<String>();
         this.transactions.add("Account creation");
         System.out.println("Account created.");
@@ -98,7 +99,6 @@ public class BankAccount {
     public void withdraw(double amount){
         if (amount > this.amount){
             System.out.println("Transaction can't be completed. Insufficient funds.");
-            
         }
         else {
             this.amount -= amount;
