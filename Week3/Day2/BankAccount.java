@@ -1,5 +1,4 @@
 // Week3_Day2_Exc
-
 /*
  * DESCRIPTION
  * BankAccount class
@@ -11,7 +10,6 @@
  */
 
 package exc_bankaccount;
-
 import java.util.ArrayList;
 
 public class BankAccount {
