@@ -1,4 +1,5 @@
 // Week3_Day2_Exc
+
 /*
  * DESCRIPTION
  * BankAccount class
@@ -10,6 +11,7 @@
  */
 
 package exc_bankaccount;
+
 import java.util.ArrayList;
 
 public class BankAccount {
@@ -31,7 +33,6 @@ public class BankAccount {
         this.name = "No name";
         // Use the number of accounts opened as a unique ID
         this.number = accountsOpened;
-        // Create transactions list and store its first entry
         this.transactions = new ArrayList<String>();
         this.transactions.add("Account creation");
         System.out.println("Account created.");
@@ -40,12 +41,26 @@ public class BankAccount {
     public BankAccount(String name, int number){
         this();
         this.name = name;
-        this.number = number;
+        if (number > accountsOpened){
+            this.number = number;
+        }
+        else if (number <= 0) {
+            System.out.printf("Account number must be positive. Setting number to: %d%n", accountsOpened);
+        }
+        else {
+            System.out.printf("Account number is taken. Setting number to: %d%n", accountsOpened);
+        }
     }
     
     public BankAccount(int number, double initialAmount, String name){
         this(name, number);
-        this.deposit(initialAmount);
+        if (initialAmount > 0){
+            deposit(initialAmount);
+        }
+        else {
+            System.out.printf("The initial amount must be positive. Setting balance to %.2f€%n", amount);
+        }
+        
     }
 
     /* Accessor properties */
@@ -54,7 +69,7 @@ public class BankAccount {
     }
     
     public void setNumber(int number) {
-        this.number = number;
+       this.number = number;
     }
     
     public double getBalance() {
@@ -92,15 +107,14 @@ public class BankAccount {
     
     /* Methods */   
     public void deposit(double amount){
-        this.amount += amount;
-        this.transactions.add("Deposit: " + String.format("%.2f", amount) + "€");
+        if (amount > 0){
+           this.amount += amount;
+           this.transactions.add("Deposit: " + String.format("%.2f", amount) + "€");
+        }
     }
     
     public void withdraw(double amount){
-        if (amount > this.amount){
-            System.out.println("Transaction can't be completed. Insufficient funds.");
-        }
-        else {
+        if (amount <= this.amount){
             this.amount -= amount;
             this.transactions.add("Withdraw: " + String.format("%.2f", amount) + "€");
         }
