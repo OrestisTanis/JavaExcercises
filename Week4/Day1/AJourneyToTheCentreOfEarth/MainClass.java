@@ -50,8 +50,7 @@ public class MainClass {
         System.out.println("Enter a word you wish to find the number of occurrences for in Jules' Verne \"A Journey to the Interior of Earth\": ");
         String wordFromUser = getStringFromInput("[a-zA-Z]+", "Please enter a valid word: ");
         System.out.printf("The word \"%s\" appears %d of times in the book's text.\n", wordFromUser, wordOccurrenceMap.get(wordFromUser));
-        
-        // Words with more than 500 occurrences
+
         printWordsWithMoreThan500Occurrences(wordOccurrenceMap);
         sc.close();
     }
