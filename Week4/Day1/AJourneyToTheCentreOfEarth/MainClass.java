@@ -52,7 +52,7 @@ public class MainClass {
         System.out.printf("The word \"%s\" appears %d of times in the book's text.\n", wordFromUser, wordOccurrenceMap.get(wordFromUser));
         
         // Words with more than 500 occurrences
-        printFirst500Occurrences(wordOccurrenceMap);
+        printWordsWithMoreThan500Occurrences(wordOccurrenceMap);
         sc.close();
     }
     
@@ -69,7 +69,7 @@ public class MainClass {
         return userInput;
     }
     
-    public static void printFirst500Occurrences(Map wordOccurrenceMap){
+    public static void printWordsWithMoreThan500Occurrences(Map wordOccurrenceMap){
         WordComparator wordComparator = new WordComparator();
         Set<Entry<String, Integer>> treeSet = new TreeSet(wordComparator);
         treeSet.addAll(wordOccurrenceMap.entrySet());
