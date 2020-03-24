@@ -19,7 +19,7 @@ public class MainClass {
        Report all words that appeared in the book at least 500 times, in alphabetical order.      
                                                                                                   
        The solution uses a HashMap to store the number of occurrences for each word as it is very  
-       efficient for all operations and then a TreeSet to sort them by occurrence number. */
+       efficient for all operations and then a TreeSet of the map's entries to sort them by occurrence number. */
     
     public static void main(String[] args) {
         Scanner sc = null;
