@@ -58,10 +58,12 @@ public class MainClass {
     public static String getStringFromInput(String allowedRegex, String invalidInputMessage) {
         Scanner scanner = new Scanner(System.in);
         String userInput = "";
+        boolean inputValid = false;
         Pattern pattern = Pattern.compile(allowedRegex);
-        while (!pattern.matcher(userInput).matches()) {
-            userInput = scanner.nextLine().toLowerCase().trim();
-            if (!pattern.matcher(userInput).matches()) {
+        while (!inputValid) {
+            userInput = scanner.nextLine().trim().toLowerCase();
+            inputValid = pattern.matcher(userInput).matches();
+            if (!inputValid) {
                 System.out.println(invalidInputMessage);
             }
         }
