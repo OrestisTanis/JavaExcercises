@@ -80,7 +80,7 @@ public class MainClass {
         int i = 0;
         while (iterator.hasNext()){
             Map.Entry entry = iterator.next();
-            if ((int)entry.getValue() > 500){
+            if ((int)entry.getValue() > 499){
                 i++;
                 System.out.println(i + ". " + entry.getKey() + " ---> " + entry.getValue());
             }
